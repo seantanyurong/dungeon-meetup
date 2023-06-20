@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { api } from "~/utils/api";
+import { SignIn } from "@clerk/nextjs";
 
 export default function Home() {
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
@@ -44,6 +45,7 @@ export default function Home() {
           <p className="text-2xl text-white">
             {hello.data ? hello.data.greeting : "Loading tRPC query..."}
           </p>
+          <SignIn />
         </div>
       </main>
     </>
