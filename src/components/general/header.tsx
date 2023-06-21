@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Logo from "./logo";
 import MobileMenu from "./mobile-menu";
+import { UserButton } from "@clerk/nextjs";
 
 export default function Header() {
   const [top, setTop] = useState<boolean>(true);
@@ -22,36 +23,39 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed pb-10 bg-blue-500 w-full z-50 ${
+      className={`fixed z-50 w-full bg-blue-500 pb-10 ${
         !top ? " backdrop-blurmd shadow-lg" : ""
       }`}
     >
-      <div className="max-w-6xl mx-auto px-5 sm:px-6">
-        <div className="flex items-center justify-between pt-10 h-16 md:h-24">
+      <div className="mx-auto max-w-6xl px-5 sm:px-6">
+        <div className="flex h-16 items-center justify-between pt-10 md:h-24">
           {/* Site branding */}
-          <div className="shrink-0 mr-4">
+          <div className="mr-4 shrink-0">
             <Logo />
           </div>
 
           {/* Desktop navigation */}
           <nav className="hidden md:flex md:grow">
             {/* Desktop sign in links */}
-            <ul className="flex grow justify-end flex-wrap items-center">
+            <ul className="flex grow flex-wrap items-center justify-end">
               <li>
                 <Link
-                  href="https://szuv34ek50v.typeform.com/to/VJtnptbh"
-                  className="font-medium text-blue-500 bg-brown-400 hover:bg-brown-300 py-2 flex items-center transition duration-[0.4s] ease-in-out px-8 rounded-lg font-montreal"
+                  href="/sign-up"
+                  className="flex items-center rounded-lg bg-brown-400 px-8 py-2 font-montreal font-medium text-blue-500 transition duration-[0.4s] ease-in-out hover:bg-brown-300"
                 >
-                  APPLY
+                  GET STARTED
                 </Link>
               </li>
               <li>
                 <Link
-                  href="https://szuv34ek50v.typeform.com/to/VJtnptbh"
-                  className="font-medium btn-sm text-brown-400 bg-blue-500 border-[1px] border-brown-400 hover:shadow-5xl ml-3 font-montreal transition duration-[0.4s] rounded-lg px-8"
+                  href="/sign-in"
+                  className="btn-sm ml-3 rounded-lg border-[1px] border-brown-400 bg-blue-500 px-8 font-montreal font-medium text-brown-400 transition duration-[0.4s] hover:shadow-5xl"
                 >
                   <span>LOGIN</span>
                 </Link>
+              </li>
+              <li>
+                <UserButton afterSignOutUrl="/" />
               </li>
             </ul>
           </nav>

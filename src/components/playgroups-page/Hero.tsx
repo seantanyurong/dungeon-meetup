@@ -9,20 +9,14 @@ export default function Hero() {
           {/* Section header */}
           <div className="pb-12 text-center md:pb-16">
             <h1
-              className="mb-6 block text-5xl font-bold leading-none text-white md:text-[4.5em]"
+              className="mb-16 block text-5xl font-bold leading-none text-white md:text-[4.5em]"
               data-aos="zoom-y-out"
             >
-              <Balancer>Find a Magic the Gathering playgroup today.</Balancer>
+              <Balancer>
+                Find or Create a Magic the Gathering playgroup today.
+              </Balancer>
             </h1>
             <div className="mx-auto max-w-3xl">
-              <p
-                className="mb-8 font-montreal text-2xl text-white md:text-3xl"
-                data-aos="zoom-y-out"
-                data-aos-delay="150"
-              >
-                Join or launch a physical playgroup in your area to play casual
-                EDH or competitive formats every week.
-              </p>
               <div
                 className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
                 data-aos="zoom-y-out"
@@ -33,7 +27,7 @@ export default function Hero() {
                     className="btn w-full border-[1px] border-brown-400 bg-[#071112] px-24 font-montreal text-xl text-brown-400 shadow-4xl transition duration-[0.4s] hover:bg-black hover:shadow-3xl sm:ml-4 sm:w-auto"
                     href="#0"
                   >
-                    Get Started
+                    Create a Playgroup
                   </a>
                 </div>
               </div>

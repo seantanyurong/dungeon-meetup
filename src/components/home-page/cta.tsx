@@ -1,36 +1,36 @@
 export default function Cta() {
   return (
     <section className="relative bg-blue-500">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Hero content */}
-        <div className="pt-32 pb-12 md:pt-52 md:pb-32">
+        <div className="pb-12 pt-32 md:pb-32 md:pt-52">
           {/* Section header */}
-          <div className="text-center pb-12 md:pb-16">
+          <div className="pb-12 text-center md:pb-16">
             <h1
-              className="text-3xl md:text-6xl font-extrabold mb-4 text-white"
+              className="mb-4 text-3xl font-extrabold text-white md:text-6xl"
               data-aos="zoom-y-out"
             >
-              Think you're a fit?
+              Find a playgroup today.
             </h1>
-            <div className="max-w-3xl mx-auto">
+            <div className="mx-auto max-w-3xl">
               <p
-                className="text-xl text-white mb-8 font-montreal"
+                className="mb-8 font-montreal text-xl text-white"
                 data-aos="zoom-y-out"
                 data-aos-delay="150"
               >
-                Let's find out.
+                Let&apos;s put the Gathering back in Magic.
               </p>
               <div
-                className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center"
+                className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
                 data-aos="zoom-y-out"
                 data-aos-delay="300"
               >
                 <div>
                   <a
-                    className="btn shadow-4xl text-brown-400 font-montreal bg-[#071112] hover:bg-black hover:shadow-3xl w-full sm:w-auto sm:ml-4 px-24 border-[1px] transition duration-[0.4s] border-brown-400 text-xl"
+                    className="btn w-full border-[1px] border-brown-400 bg-[#071112] px-24 font-montreal text-xl text-brown-400 shadow-4xl transition duration-[0.4s] hover:bg-black hover:shadow-3xl sm:ml-4 sm:w-auto"
                     href="https://szuv34ek50v.typeform.com/to/VJtnptbh"
                   >
-                    Apply Now
+                    Get Started
                   </a>
                 </div>
               </div>

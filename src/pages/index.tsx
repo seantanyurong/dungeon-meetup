@@ -13,8 +13,8 @@ import Hero from "src/components/home-page/hero";
 import Features from "src/components/home-page/features";
 import Introduction from "src/components/home-page/introduction";
 import FeatureBlocks from "src/components/home-page/feature-blocks";
-import Companies from "src/components/home-page/companies";
-import Conclusion from "src/components/home-page/conclusion";
+// import Companies from "src/components/home-page/companies";
+// import Conclusion from "src/components/home-page/conclusion";
 import Cta from "src/components/home-page/cta";
 
 export default function Home() {
@@ -25,8 +25,8 @@ export default function Home() {
       <Features />
       <Introduction />
       <FeatureBlocks />
-      <Companies />
-      <Conclusion />
+      {/* <Companies />
+      <Conclusion /> */}
       <Cta />
       <Footer />
     </>

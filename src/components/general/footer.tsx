@@ -20,8 +20,8 @@ export default function Footer() {
             <span className="block h-[1px] w-[39%] rounded-full bg-[#d1d3cd]"></span>
           </div>
           <p className="my-12 text-center font-montreal text-xl font-medium">
-            Labryinth is a highly vetted membership community for restaurant,
-            cafe and bar owners.
+            Dungeon Meetup is a community for Magic the Gathering players to
+            find physical playgroups.
           </p>
           <div
             className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
@@ -33,7 +33,7 @@ export default function Footer() {
                 className="btn w-full bg-blue-500 px-24 font-montreal  text-xl text-white shadow-4xl transition duration-[0.4s] hover:shadow-3xl sm:ml-4 sm:w-auto"
                 href="https://szuv34ek50v.typeform.com/to/VJtnptbh"
               >
-                Apply Now
+                Get Started
               </a>
             </div>
           </div>
