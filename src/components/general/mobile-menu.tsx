@@ -41,14 +41,14 @@ export default function MobileMenu() {
       {/* Hamburger button */}
       <button
         ref={trigger}
-        className={`hamburger ${mobileNavOpen && "active"}`}
+        className={`hamburger ${mobileNavOpen ? "active" : ""}`}
         aria-controls="mobile-nav"
         aria-expanded={mobileNavOpen}
         onClick={() => setMobileNavOpen(!mobileNavOpen)}
       >
         <span className="sr-only">Menu</span>
         <svg
-          className="w-6 h-6 fill-current text-white"
+          className="h-6 w-6 fill-current text-white"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -64,7 +64,7 @@ export default function MobileMenu() {
           show={mobileNavOpen}
           as="nav"
           id="mobile-nav"
-          className="absolute top-full h-screen pb-16 z-20 left-0 w-full bg-blue-500"
+          className="absolute left-0 top-full z-20 h-screen w-full bg-blue-500 pb-16"
           enter="transition ease-out duration-200 transform"
           enterFrom="opacity-0 -translate-y-2"
           enterTo="opacity-100 translate-y-0"
@@ -72,11 +72,11 @@ export default function MobileMenu() {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <ul className="px-5 py-2 flex flex-col items-center space-y-6">
+          <ul className="flex flex-col items-center space-y-6 px-5 py-2">
             <li>
               <Link
                 href="https://szuv34ek50v.typeform.com/to/VJtnptbh"
-                className="font-lg text-blue-500 bg-brown-400 hover:bg-brown-300 py-4 transition duration-[0.4s] ease-in-out px-20 rounded-lg font-montreal"
+                className="font-lg rounded-lg bg-brown-400 px-20 py-4 font-montreal text-blue-500 transition duration-[0.4s] ease-in-out hover:bg-brown-300"
               >
                 APPLY
               </Link>
@@ -84,7 +84,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="https://szuv34ek50v.typeform.com/to/VJtnptbh"
-                className="font-lg btn-sm text-brown-400 bg-blue-500 border-[1px] py-4 border-brown-400 hover:shadow-5xl font-montreal transition duration-[0.4s] rounded-lg px-20"
+                className="font-lg btn-sm rounded-lg border-[1px] border-brown-400 bg-blue-500 px-20 py-4 font-montreal text-brown-400 transition duration-[0.4s] hover:shadow-5xl"
               >
                 <span>LOGIN</span>
               </Link>

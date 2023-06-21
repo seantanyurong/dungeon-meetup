@@ -118,31 +118,17 @@ export default function Features() {
           <div className="mx-auto max-w-3xl pb-12 text-center md:pb-16">
             <h1 className="h3 mb-4 text-blue-500">
               <Balancer>
-                Labyrinth members run the most successful food & beverage
-                establishments, across a wide array of niches.
+                Dungeon Meetup houses a range of Magic the Gathering playgroups
+                from countries all across the globe.
               </Balancer>
             </h1>
             <p className="font-montreal text-xl text-blue-500">
-              Some run michelin star restaurants, others humble cafes. But all
-              our members seek belonging, support, and connection with a
-              selective group of their peers.
+              Some play EDH, others competitive or limited constructed formats.
+              But all our playgroups seek fun, belonging, and connection with
+              other Magic the Gathering players.
             </p>
           </div>
         </div>
-        {/* <div className="mx-auto grid gap-6 sm:hidden items-start">
-          {memberList1.map((member, index) => {
-            return (
-              <div className="" key={index}>
-                <MemberCard
-                  image={member.image}
-                  name={member.name}
-                  title={member.title}
-                  description={member.description}
-                />
-              </div>
-            );
-          })}
-        </div> */}
       </div>
 
       <div className="relative">
