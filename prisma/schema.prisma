@@ -11,8 +11,28 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Example {
+model Playgroup {
     id        String   @id @default(cuid())
     createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
+    currentSize Int
+    maxSize Int
+    format Format
+    description String
+    title String
+    city String
+    lgs Boolean
+    physical Boolean
+    sticky Boolean
+    image String?
+    // owner String
+}
+
+enum Format {
+  EDH
+  CEDH
+  STANDARD
+  PIONEER
+  MODERN
+  LEGACY
+  LIMITED
 }

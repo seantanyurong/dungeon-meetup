@@ -12,7 +12,7 @@ import React from "react";
 import Header from "~/components/general/header";
 import Hero from "~/components/playgroups-page/Hero";
 import Sidebar from "~/components/playgroups-page/Sidebar";
-import JobList from "~/components/playgroups-page/JobList";
+import JobList from "~/components/playgroups-page/PlaygroupList";
 import Footer from "~/components/general/footer";
 
 function Home() {

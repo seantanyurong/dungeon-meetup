@@ -1,18 +1,30 @@
-import React from 'react';
+import React from "react";
 
 function Newsletter() {
   return (
-    <div className="relative text-center px-4 py-6 group">
+    <div className="group relative px-4 py-6 text-center">
       <div
-        className="absolute inset-0 rounded-xl bg-gray-50 border border-gray-200 -rotate-1 group-hover:rotate-0 transition duration-150 ease-in-out -z-10"
+        className="absolute inset-0 -z-10 -rotate-1 rounded-xl border border-gray-200 bg-gray-50 transition duration-150 ease-in-out group-hover:rotate-0"
         aria-hidden="true"
       />
-      <div className="font-nycd text-xl text-indigo-500 mb-1">Land your dream job</div>
-      <div className="text-2xl font-bold mb-5">Get a weekly email with the latest startup jobs.</div>
+      <div className="font-nycd mb-1 text-xl text-indigo-500">
+        The Ultimate Magic Playgroup Finder
+      </div>
+      <div className="mb-5 text-2xl font-bold">
+        Get a weekly email with the latest community updates.
+      </div>
       <form className="inline-flex max-w-sm">
-        <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-none">
-          <input type="email" className="form-input py-1.5 w-full mb-2 sm:mb-0 sm:mr-2" placeholder="Your email" aria-label="Your email" />
-          <button className="btn-sm text-white bg-indigo-500 hover:bg-indigo-600 shadow-sm whitespace-nowrap" type="submit">
+        <div className="mx-auto flex max-w-xs flex-col justify-center sm:max-w-none sm:flex-row">
+          <input
+            type="email"
+            className="form-input mb-2 w-full py-1.5 sm:mb-0 sm:mr-2"
+            placeholder="Your email"
+            aria-label="Your email"
+          />
+          <button
+            className="btn-sm whitespace-nowrap bg-indigo-500 text-white shadow-sm hover:bg-indigo-600"
+            type="submit"
+          >
             Join Newsletter
           </button>
         </div>
