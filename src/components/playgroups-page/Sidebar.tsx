@@ -28,41 +28,43 @@ function Sidebar() {
                 <li>
                   <label className="flex items-center">
                     <input type="checkbox" className="form-checkbox" />
-                    <span className="ml-2 text-sm text-gray-600">
-                      Full-time
-                    </span>
+                    <span className="ml-2 text-sm text-gray-600">EDH</span>
                   </label>
                 </li>
                 <li>
                   <label className="flex items-center">
                     <input type="checkbox" className="form-checkbox" />
-                    <span className="ml-2 text-sm text-gray-600">
-                      Part-time
-                    </span>
+                    <span className="ml-2 text-sm text-gray-600">cEDH</span>
                   </label>
                 </li>
                 <li>
                   <label className="flex items-center">
                     <input type="checkbox" className="form-checkbox" />
-                    <span className="ml-2 text-sm text-gray-600">
-                      Intership
-                    </span>
+                    <span className="ml-2 text-sm text-gray-600">Standard</span>
                   </label>
                 </li>
                 <li>
                   <label className="flex items-center">
                     <input type="checkbox" className="form-checkbox" />
-                    <span className="ml-2 text-sm text-gray-600">
-                      Contract / Freelance
-                    </span>
+                    <span className="ml-2 text-sm text-gray-600">Pioneer</span>
                   </label>
                 </li>
                 <li>
                   <label className="flex items-center">
                     <input type="checkbox" className="form-checkbox" />
-                    <span className="ml-2 text-sm text-gray-600">
-                      Co-founder
-                    </span>
+                    <span className="ml-2 text-sm text-gray-600">Modern</span>
+                  </label>
+                </li>
+                <li>
+                  <label className="flex items-center">
+                    <input type="checkbox" className="form-checkbox" />
+                    <span className="ml-2 text-sm text-gray-600">Legacy</span>
+                  </label>
+                </li>
+                <li>
+                  <label className="flex items-center">
+                    <input type="checkbox" className="form-checkbox" />
+                    <span className="ml-2 text-sm text-gray-600">Limited</span>
                   </label>
                 </li>
               </ul>

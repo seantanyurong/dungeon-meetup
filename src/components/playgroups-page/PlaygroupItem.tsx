@@ -37,7 +37,7 @@ function PlaygroupItem({
         !sticky ? "border-b border-gray-200" : ""
       }`}
     >
-      <div className={`px-4 py-6 ${sticky ? "rounded-xl bg-stone-300" : ""}`}>
+      <div className={`px-4 py-6 ${sticky ? "rounded-xl bg-indigo-100" : ""}`}>
         <div className="items-center space-y-3 sm:flex sm:space-x-5 sm:space-y-0">
           <div className="shrink-0 ">
             <Image
@@ -64,14 +64,17 @@ function PlaygroupItem({
                 )}
               </div>
               <div className="mb-2">
-                <Link className="text-lg font-bold" href={id}>
+                <Link
+                  className="text-lg font-bold"
+                  href={`/playgroup-details/${id}`}
+                >
                   {title}
                 </Link>
               </div>
               <div className="-m-1">
                 <a
                   className={`m-1 inline-flex whitespace-nowrap rounded-md px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150 ease-in-out hover:text-gray-600 ${
-                    sticky ? "bg-indigo-100" : "bg-gray-100"
+                    sticky ? "bg-indigo-200" : "bg-gray-100"
                   }`}
                   href="#0"
                 >
@@ -79,7 +82,7 @@ function PlaygroupItem({
                 </a>
                 <a
                   className={`m-1 inline-flex whitespace-nowrap rounded-md px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150 ease-in-out hover:text-gray-600 ${
-                    sticky ? "bg-indigo-100" : "bg-gray-100"
+                    sticky ? "bg-indigo-200" : "bg-gray-100"
                   }`}
                   href="#0"
                 >
@@ -87,11 +90,11 @@ function PlaygroupItem({
                 </a>
                 <a
                   className={`m-1 inline-flex whitespace-nowrap rounded-md px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150 ease-in-out hover:text-gray-600 ${
-                    sticky ? "bg-indigo-100" : "bg-gray-100"
+                    sticky ? "bg-indigo-200" : "bg-gray-100"
                   }`}
                   href="#0"
                 >
-                  {`${currentSize} / ${maxSize}`}
+                  {`${currentSize} / ${maxSize} Players`}
                 </a>
                 {lgs && (
                   <a
@@ -108,10 +111,10 @@ function PlaygroupItem({
             <div className="flex min-w-[120px] items-center space-x-3 lg:justify-end lg:space-x-0">
               <div className="lg:hidden group-hover:lg:block">
                 <Link
-                  className="btn-sm group bg-blue-500 px-3 py-1.5 text-white shadow-sm hover:bg-blue-500"
-                  href={id}
+                  className="btn-sm group bg-black px-3 py-1.5 text-white shadow-sm hover:bg-indigo-950"
+                  href={`/playgroup-details/${id}`}
                 >
-                  Apply Now{" "}
+                  Join Now
                   <span className="ml-1 tracking-normal text-indigo-200 transition-transform duration-150 ease-in-out group-hover:translate-x-0.5">
                     -&gt;
                   </span>

@@ -5,19 +5,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        white: "#F6F6F6",
+        white: "#F0F0FF",
         brown: { 300: "#ccb5a0", 400: "#d1bfae", 500: "#AA947F" },
-        gray: {
-          100: "#FBFBFB",
-          200: "#EAEAEA",
-          300: "#DFDFDF",
-          400: "#999999",
-          500: "#EFF0ED",
-          600: "#666666",
-          700: "#4C4C4C",
-          800: "#333333",
-          900: "#191919",
-        },
+        // gray: {
+        //   100: "#FBFBFB",
+        //   200: "#EAEAEA",
+        //   300: "#DFDFDF",
+        //   400: "#999999",
+        //   500: "#EFF0ED",
+        //   600: "#666666",
+        //   700: "#4C4C4C",
+        //   800: "#333333",
+        //   900: "#191919",
+        // },
         blue: {
           100: "#E6F0FD",
           200: "#CCE2FC",
@@ -40,6 +40,10 @@ export default {
           800: "#285E61",
           900: "#234E52",
         },
+        purple: {
+          300: "#beaaff",
+          600: "#9146FF",
+        },
       },
       boxShadow: {
         xs: "0 0 0 1px rgba(0, 0, 0, 0.16)",
@@ -50,9 +54,11 @@ export default {
         lg: "0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02)",
         xl: "0 20px 25px -5px rgba(0, 0, 0, 0.12), 0 10px 10px -5px rgba(0, 0, 0, 0.02)",
         "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.15)",
-        "3xl": "-5px 5px 0px #d1bfae",
-        "4xl": "-8px 8px 0px #d1bfae",
-        "5xl": "-3px 3px 0px #5e5e5e", // isn't actually a larger shadow
+        "3xl": "-5px 5px 0px #F0F0FF",
+        "4xl": "-8px 8px 0px #F0F0FF",
+        "5xl": "-3px 3px 0px #000000", // isn't actually a larger shadow
+        "6xl": "-5px 5px 0px #000000",
+        "7xl": "-8px 8px 0px #000000",
         inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.04)",
         outline: "0 0 0 3px rgba(66, 153, 225, 0.5)",
         none: "none",
@@ -63,9 +69,9 @@ export default {
         "1/1": "100%",
       },
       fontFamily: {
-        // inter: ["Inter", "sans-serif"],
-        financier: ["var(--font-financier)"],
-        montreal: ["var(--font-montreal)"],
+        rubik: ["Rubik", "sans-serif"],
+        // financier: ["var(--font-financier)"],
+        // montreal: ["var(--font-montreal)"],
       },
       fontSize: {
         xs: "0.75rem",
@@ -73,8 +79,8 @@ export default {
         base: "1rem",
         lg: "1.125rem",
         xl: "1.25rem",
-        "2xl": "1.5rem",
-        "3xl": "2rem",
+        "2xl": "1.3rem",
+        "3xl": "1.75rem",
         "4xl": "2.625rem",
         "5xl": "3.25rem",
         "6xl": "5.5rem",

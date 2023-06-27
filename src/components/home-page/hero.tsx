@@ -2,7 +2,7 @@ import Balancer from "react-wrap-balancer";
 
 export default function Hero() {
   return (
-    <section className="relative bg-blue-500">
+    <section className="relative bg-purple-600">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Hero content */}
         <div className="pb-24 pt-44 md:pb-28 md:pt-52">
@@ -16,7 +16,7 @@ export default function Hero() {
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
-                className="mb-8 font-montreal text-2xl text-white md:text-3xl"
+                className="font-montreal mb-8 text-2xl text-white md:text-3xl"
                 data-aos="zoom-y-out"
                 data-aos-delay="150"
               >
@@ -30,7 +30,7 @@ export default function Hero() {
               >
                 <div>
                   <a
-                    className="btn w-full border-[1px] border-brown-400 bg-[#071112] px-24 font-montreal text-xl text-brown-400 shadow-4xl transition duration-[0.4s] hover:bg-black hover:shadow-3xl sm:ml-4 sm:w-auto"
+                    className="btn font-montreal w-full border-[1px] border-white bg-black px-24 text-xl text-white shadow-4xl transition duration-[0.4s] hover:bg-indigo-950 hover:shadow-3xl sm:ml-4 sm:w-auto"
                     href="#0"
                   >
                     Get Started

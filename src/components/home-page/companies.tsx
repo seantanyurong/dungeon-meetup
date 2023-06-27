@@ -133,7 +133,7 @@ export default function Companies() {
         })}
       </Marquee>
       <Marquee className="mb-[0.1rem]">
-        {companyList3.map((company, index) => {
+        {companyList2.map((company, index) => {
           return (
             <div className="col-span-9 lg:col-span-3" key={index}>
               <CompanyCard image={company.image} />

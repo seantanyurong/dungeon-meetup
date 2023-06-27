@@ -8,7 +8,7 @@ export default function Logo() {
       <Image
         src={LogoImg}
         alt="temp"
-        width={175}
+        width={80}
         style={{ objectFit: "cover" }}
       />
     </Link>

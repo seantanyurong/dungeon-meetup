@@ -64,7 +64,7 @@ export default function MobileMenu() {
           show={mobileNavOpen}
           as="nav"
           id="mobile-nav"
-          className="absolute left-0 top-full z-20 h-screen w-full bg-blue-500 pb-16"
+          className="absolute left-0 top-full z-20 h-screen w-full bg-purple-600 pb-16"
           enter="transition ease-out duration-200 transform"
           enterFrom="opacity-0 -translate-y-2"
           enterTo="opacity-100 translate-y-0"
@@ -76,7 +76,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="https://szuv34ek50v.typeform.com/to/VJtnptbh"
-                className="font-lg rounded-lg bg-brown-400 px-20 py-4 font-montreal text-blue-500 transition duration-[0.4s] ease-in-out hover:bg-brown-300"
+                className="font-lg font-montreal rounded-lg bg-brown-400 px-20 py-4 text-blue-500 transition duration-[0.4s] ease-in-out hover:bg-brown-300"
               >
                 APPLY
               </Link>
@@ -84,7 +84,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="https://szuv34ek50v.typeform.com/to/VJtnptbh"
-                className="font-lg btn-sm rounded-lg border-[1px] border-brown-400 bg-blue-500 px-20 py-4 font-montreal text-brown-400 transition duration-[0.4s] hover:shadow-5xl"
+                className="font-lg btn-sm font-montreal rounded-lg border-[1px] border-brown-400 bg-purple-600 px-20 py-4 text-brown-400 transition duration-[0.4s] hover:shadow-5xl"
               >
                 <span>LOGIN</span>
               </Link>

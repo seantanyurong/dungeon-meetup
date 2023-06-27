@@ -11,21 +11,21 @@ function Newsletter() {
         The Ultimate Magic Playgroup Finder
       </div>
       <div className="mb-5 text-2xl font-bold">
-        Get a weekly email with the latest community updates.
+        Join our community Discord to get the latest updates
       </div>
       <form className="inline-flex max-w-sm">
         <div className="mx-auto flex max-w-xs flex-col justify-center sm:max-w-none sm:flex-row">
-          <input
+          {/* <input
             type="email"
             className="form-input mb-2 w-full py-1.5 sm:mb-0 sm:mr-2"
             placeholder="Your email"
             aria-label="Your email"
-          />
+          /> */}
           <button
-            className="btn-sm whitespace-nowrap bg-indigo-500 text-white shadow-sm hover:bg-indigo-600"
+            className="btn whitespace-nowrap bg-indigo-500 text-white shadow-sm hover:bg-indigo-600"
             type="submit"
           >
-            Join Newsletter
+            Join Discord
           </button>
         </div>
         {/* Success message */}
