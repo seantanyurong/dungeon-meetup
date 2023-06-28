@@ -2,13 +2,14 @@ import React from "react";
 // import type { StaticImageData } from "next/image";
 import Image from "next/image";
 import Link from "next/link";
+import type { Format } from "@prisma/client";
 
 interface PlaygroupItemProps {
   id: string;
   // createdAt: Date;
   currentSize: number;
   maxSize: number;
-  format: string;
+  formats: Format[];
   // description: string;
   title: string;
   city: string;
@@ -23,7 +24,7 @@ function PlaygroupItem({
   // createdAt,
   currentSize,
   maxSize,
-  format,
+  formats,
   title,
   city,
   lgs,
@@ -72,14 +73,19 @@ function PlaygroupItem({
                 </Link>
               </div>
               <div className="-m-1">
-                <a
-                  className={`m-1 inline-flex whitespace-nowrap rounded-md px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150 ease-in-out hover:text-gray-600 ${
-                    sticky ? "bg-indigo-200" : "bg-gray-100"
-                  }`}
-                  href="#0"
-                >
-                  {format}
-                </a>
+                {formats?.map((format) => {
+                  return (
+                    <a
+                      className={`m-1 inline-flex whitespace-nowrap rounded-md px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150 ease-in-out hover:text-gray-600 ${
+                        sticky ? "bg-indigo-200" : "bg-gray-100"
+                      }`}
+                      href="#0"
+                      key={format.id}
+                    >
+                      {format.formatType}
+                    </a>
+                  );
+                })}
                 <a
                   className={`m-1 inline-flex whitespace-nowrap rounded-md px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150 ease-in-out hover:text-gray-600 ${
                     sticky ? "bg-indigo-200" : "bg-gray-100"

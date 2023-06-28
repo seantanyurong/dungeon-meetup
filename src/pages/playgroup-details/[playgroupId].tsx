@@ -182,9 +182,9 @@ function JobPost() {
                         <h3 className="mb-3 text-xl font-bold text-gray-800">
                           Formats
                         </h3>
-                        <div className="space-y-3 text-gray-600">
+                        {/* <div className="space-y-3 text-gray-600">
                           <p>{playgroupData?.format}</p>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                     {/* Social share */}
@@ -256,7 +256,7 @@ function JobPost() {
                             id={playgroup.id}
                             currentSize={playgroup.currentSize}
                             maxSize={playgroup.maxSize}
-                            format={playgroup.format}
+                            formats={playgroup.formats}
                             title={playgroup.title}
                             city={playgroup.city}
                             lgs={playgroup.lgs}

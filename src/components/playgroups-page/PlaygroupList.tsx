@@ -21,7 +21,7 @@ function JobList() {
               id={playgroup.id}
               currentSize={playgroup.currentSize}
               maxSize={playgroup.maxSize}
-              format={playgroup.format}
+              formats={playgroup.formats}
               title={playgroup.title}
               city={playgroup.city}
               lgs={playgroup.lgs}

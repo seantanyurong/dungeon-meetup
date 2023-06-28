@@ -10,7 +10,7 @@ export const playgroupRouter = createTRPCRouter({
       };
     }),
   getAll: publicProcedure.query(({ ctx }) => {
-    return ctx.prisma.playgroup.findMany();
+    return ctx.prisma.playgroup.findMany({ include: { formats: true } });
   }),
   getById: publicProcedure
     .input(z.object({ id: z.string() }))

@@ -1,6 +1,7 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
@@ -16,7 +17,7 @@ model Playgroup {
     createdAt DateTime @default(now())
     currentSize Int
     maxSize Int
-    format Format
+    formats Format[]
     description String
     title String
     city String
@@ -27,12 +28,20 @@ model Playgroup {
     // owner String
 }
 
-enum Format {
-  EDH
-  CEDH
-  STANDARD
-  PIONEER
-  MODERN
-  LEGACY
-  LIMITED
+model Format {
+    id  String   @id @default(cuid())
+    formatType FormatType
+    playgroupId String
+    playgroup Playgroup @relation(fields: [playgroupId], references: [id])
+    @@index([playgroupId])
+}
+
+enum FormatType {
+    EDH
+    CEDH
+    STANDARD
+    PIONEER
+    MODERN
+    LEGACY
+    LIMITED
 }
