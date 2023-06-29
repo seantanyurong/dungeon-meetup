@@ -1,4 +1,5 @@
 import { playgroupRouter } from "~/server/api/routers/playgroup";
+import { formatRouter } from "~/server/api/routers/format";
 import { createTRPCRouter } from "~/server/api/trpc";
 
 /**
@@ -8,6 +9,7 @@ import { createTRPCRouter } from "~/server/api/trpc";
  */
 export const appRouter = createTRPCRouter({
   playgroup: playgroupRouter,
+  format: formatRouter,
 });
 
 // export type definition of API

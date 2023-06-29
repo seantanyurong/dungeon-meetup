@@ -38,10 +38,10 @@ model Format {
 
 enum FormatType {
     EDH
-    CEDH
-    STANDARD
-    PIONEER
-    MODERN
-    LEGACY
-    LIMITED
+    cEDH
+    Standard
+    Pioneer
+    Modern
+    Legacy
+    Limited
 }
