@@ -44,7 +44,7 @@ export default function Header() {
               <ul className="flex grow flex-wrap items-center justify-end">
                 <li>
                   <Link
-                    href="/playgroups"
+                    href="/create-playgroup"
                     className="font-montreal flex items-center rounded-lg bg-black px-8 py-2 font-medium text-white transition duration-[0.4s] ease-in-out hover:bg-indigo-950"
                   >
                     CREATE

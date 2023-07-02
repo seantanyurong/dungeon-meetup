@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { api } from "~/utils/api";
+import Logo from "~/components/general/logo";
 
 // import Illustration from "../images/auth-illustration.svg";
-import TestimonialAuth04 from "public/images/temp/testimonial-auth-04.jpg";
-import TestimonialAuth05 from "public/images/temp/testimonial-auth-05.jpg";
-import TestimonialAuth06 from "public/images/temp/testimonial-auth-06.jpg";
+// import TestimonialAuth04 from "public/images/temp/testimonial-auth-04.jpg";
+// import TestimonialAuth05 from "public/images/temp/testimonial-auth-05.jpg";
+// import TestimonialAuth06 from "public/images/temp/testimonial-auth-06.jpg";
 // import { format } from "path";
 // import UploadImage from "public/images/temp/upload.jpg";
 
-function PostAJob() {
+function CreatePlaygroup() {
   const { data: formatTypes } = api.format.getAll.useQuery();
   const [Lgs, setLgs] = useState(false);
+  const [card, setCard] = useState<ScryfallCard>();
 
   // Add a selected state to the different formats
   const formatTypeWithSelect = formatTypes?.map((formatType) => ({
@@ -20,11 +21,99 @@ function PostAJob() {
     selected: false,
   }));
 
+  interface ScryfallCard {
+    object: string;
+    id: string;
+    oracle_id: string;
+    multiverse_ids: number[];
+    tcgplayer_id: number;
+    cardmarket_id: number;
+    name: string;
+    lang: string;
+    released_at: string;
+    uri: string;
+    scryfall_uri: string;
+    layout: string;
+    highres_image: boolean;
+    image_status: string;
+    image_uris: {
+      art_crop: string;
+      border_crop: string;
+      large: string;
+      normal: string;
+      png: string;
+      small: string;
+    };
+    mana_cost: string;
+    cmc: number;
+    type_line: string;
+    oracle_text: string;
+    power: string;
+    toughness: string;
+    colors: string[];
+    color_identity: string[];
+    keywords: [];
+    legalities: object;
+    games: string[];
+    reserved: boolean;
+    foil: boolean;
+    nonfoil: boolean;
+    finishes: string[];
+    oversized: boolean;
+    promo: boolean;
+    reprint: boolean;
+    variation: boolean;
+    set_id: string;
+    set: string;
+    set_name: string;
+    set_type: string;
+    set_uri: string;
+    set_search_uri: string;
+    scryfall_set_uri: string;
+    rulings_uri: string;
+    prints_search_uri: string;
+    collector_number: string;
+    digital: boolean;
+    rarity: string;
+    flavor_text: string;
+    card_back_id: string;
+    artist: string;
+    artist_ids: string[];
+    illustration_id: string;
+    border_color: string;
+    frame: string;
+    full_art: boolean;
+    textless: boolean;
+    booster: boolean;
+    story_spotlight: boolean;
+    edhrec_rank: number;
+    prices: object;
+    related_uris: object;
+    purchase_uris: object;
+  }
+
   const [formatTypesState, setFormatTypesState] =
     useState(formatTypeWithSelect);
 
+  // Get card from scryfall
+  function getRandomCard(): Promise<ScryfallCard> {
+    return fetch("https://api.scryfall.com/cards/random?q=is%3Acommander", {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        return res as ScryfallCard;
+      });
+  }
+
   useEffect(() => {
     setFormatTypesState(formatTypeWithSelect);
+    getRandomCard()
+      .then((randomCard) => {
+        setCard(randomCard);
+        console.log(randomCard);
+      })
+      .catch(() => console.log("Failed to get random card"));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [formatTypes]);
 
@@ -36,9 +125,10 @@ function PostAJob() {
           <div className="mx-auto flex h-full w-full max-w-md flex-col px-6 after:mt-auto after:flex-1">
             {/* Site header */}
             <header className="mb-auto flex flex-1">
-              <div className="flex h-16 items-center justify-between md:h-20">
+              <div className="flex h-16 items-center justify-between md:h-32">
                 {/* Logo */}
-                <Link className="group block" href="/" aria-label="Cruip">
+                <Logo />
+                {/* <Link className="group block" href="/" aria-label="Cruip">
                   <svg
                     width="32"
                     height="32"
@@ -53,7 +143,7 @@ function PostAJob() {
                       d="M13.853 18.14 30.981 1.058 21.357 31l-7.5-12.857z"
                     />
                   </svg>
-                </Link>
+                </Link> */}
               </div>
             </header>
 
@@ -471,8 +561,15 @@ function PostAJob() {
         <div className="absolute inset-0 flex flex-col justify-center">
           <div className="px-5 py-8 sm:px-6">
             <div className="mx-auto w-full max-w-xl">
-              <div className="group space-y-3">
-                {/* Testimonial */}
+              {card && (
+                <Image
+                  src={card?.image_uris?.png || ""}
+                  width={500}
+                  height={500}
+                  alt="Picture of the author"
+                />
+              )}
+              {/* <div className="group space-y-3">
                 <div className="rounded-xl border border-sky-200 bg-sky-50 p-4 opacity-30 transition duration-150 ease-in-out hover:opacity-100">
                   <div className="flex items-center space-x-5">
                     <div className="relative shrink-0">
@@ -508,7 +605,6 @@ function PostAJob() {
                     </figure>
                   </div>
                 </div>
-                {/* Testimonial */}
                 <div className="rounded-xl border border-sky-200 bg-sky-50 p-4 transition duration-150 ease-in-out hover:opacity-100">
                   <div className="flex items-center space-x-5">
                     <div className="relative shrink-0">
@@ -544,7 +640,6 @@ function PostAJob() {
                     </figure>
                   </div>
                 </div>
-                {/* Testimonial */}
                 <div className="rounded-xl border border-sky-200 bg-sky-50 p-4 opacity-30 transition duration-150 ease-in-out hover:opacity-100">
                   <div className="flex items-center space-x-5">
                     <div className="relative shrink-0">
@@ -580,7 +675,7 @@ function PostAJob() {
                     </figure>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -589,4 +684,4 @@ function PostAJob() {
   );
 }
 
-export default PostAJob;
+export default CreatePlaygroup;
