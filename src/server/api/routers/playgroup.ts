@@ -24,12 +24,12 @@ export const playgroupRouter = createTRPCRouter({
         maxSize: z.number(),
         formats: z.object({}),
         description: z.string(),
-        title: z.string(),
+        name: z.string(),
         city: z.string(),
         lgs: z.boolean(),
-        physical: z.boolean(),
+        physical: z.string(),
         sticky: z.boolean(),
-        image: z.string(),
+        cardId: z.string(),
       })
     )
     .mutation((opts) =>
@@ -39,12 +39,12 @@ export const playgroupRouter = createTRPCRouter({
           maxSize: opts.input.maxSize,
           formats: opts.input.formats,
           description: opts.input.description,
-          title: opts.input.title,
+          name: opts.input.name,
           city: opts.input.city,
           lgs: opts.input.lgs,
           physical: opts.input.physical,
           sticky: opts.input.sticky,
-          image: opts.input.image,
+          cardId: opts.input.cardId,
         },
       })
     ),

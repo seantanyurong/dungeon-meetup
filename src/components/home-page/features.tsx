@@ -6,6 +6,8 @@ import RightGradient from "public/images/right-gradient.png";
 import Marquee from "react-fast-marquee";
 import MemberCard from "../ui/member-card";
 import { Balancer } from "react-wrap-balancer";
+import { api } from "~/utils/api";
+import PlaygroupItem from "../playgroups-page/PlaygroupItem";
 import Member1 from "public/images/member-1.jpeg";
 import Member2 from "public/images/member-2.jpeg";
 import Member3 from "public/images/member-3.jpeg";
@@ -20,6 +22,8 @@ import Member11 from "public/images/member-11.jpeg";
 import Member12 from "public/images/member-12.jpeg";
 
 export default function Features() {
+  const { data } = api.playgroup.getAll.useQuery();
+
   const memberList1 = [
     {
       image: Member1,

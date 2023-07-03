@@ -166,7 +166,7 @@ function JobPost() {
                       </Link>
                     </div>
                     <h1 className="font-inter mb-10 text-4xl font-extrabold">
-                      {playgroupData?.title}
+                      {playgroupData?.name}
                     </h1>
                     {/* Job description */}
                     <div className="mb-8 space-y-8">
@@ -257,12 +257,12 @@ function JobPost() {
                             currentSize={playgroup.currentSize}
                             maxSize={playgroup.maxSize}
                             formats={playgroup.formats}
-                            title={playgroup.title}
+                            name={playgroup.name}
                             city={playgroup.city}
                             lgs={playgroup.lgs}
                             physical={playgroup.physical}
                             sticky={playgroup.sticky}
-                            image={playgroup.image}
+                            cardId={playgroup.cardId}
                           />
                         );
                       })}

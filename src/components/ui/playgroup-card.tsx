@@ -14,7 +14,7 @@ interface PlaygroupItemProps {
   name: string;
   city: string;
   lgs: boolean;
-  physical: string;
+  physical: boolean;
   sticky: boolean;
   cardId: string;
 }
@@ -92,7 +92,7 @@ function PlaygroupItem({
                   }`}
                   href="#0"
                 >
-                  {physical}
+                  {physical ? "Physical" : "Online"}
                 </a>
                 <a
                   className={`m-1 inline-flex whitespace-nowrap rounded-md px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150 ease-in-out hover:text-gray-600 ${

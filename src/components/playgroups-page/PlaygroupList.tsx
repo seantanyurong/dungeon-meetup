@@ -22,12 +22,12 @@ function JobList() {
               currentSize={playgroup.currentSize}
               maxSize={playgroup.maxSize}
               formats={playgroup.formats}
-              title={playgroup.title}
+              name={playgroup.name}
               city={playgroup.city}
               lgs={playgroup.lgs}
               physical={playgroup.physical}
               sticky={playgroup.sticky}
-              image={playgroup.image}
+              cardId={playgroup.cardId}
             />
           );
         })}

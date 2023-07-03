@@ -71,7 +71,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <ClerkProvider>
       <main
-        className={`${inter.className} bg-white tracking-tight text-black antialiased`}
+        className={`${inter.className}bg-white tracking-tight text-black antialiased`}
       >
         <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
           <Component {...pageProps} />

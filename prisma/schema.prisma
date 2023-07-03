@@ -19,12 +19,12 @@ model Playgroup {
     maxSize Int
     formats Format[]
     description String
-    title String
+    name String
     city String
     lgs Boolean
-    physical Boolean
+    physical String
     sticky Boolean
-    image String?
+    cardId String
     // owner String
 }
 
