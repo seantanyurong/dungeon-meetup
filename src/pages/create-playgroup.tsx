@@ -14,6 +14,8 @@ function CreatePlaygroup() {
   //     "id" | "createdAt" | "formats" | "sticky" | "cardId"
   //   >;
 
+  const createPlaygroupMutation = api.playgroup.createPlaygroup.useMutation();
+
   const formik = useFormik({
     initialValues: {
       currentSize: 0,
@@ -29,6 +31,7 @@ function CreatePlaygroup() {
     },
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
+      createPlaygroupMutation.mutate(values);
     },
   });
 
@@ -257,38 +260,6 @@ function CreatePlaygroup() {
                                     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                                     tempArr[index]!.selected =
                                       !formatType.selected;
-
-                                    // if (
-                                    //   formik.values.formats.includes({
-                                    //     id: tempArr[index]?.id || "",
-                                    //   })
-                                    // ) {
-                                    //   formik
-                                    //     .setFieldValue(
-                                    //       "formats",
-                                    //       formik.values.formats.push({
-                                    //         id: tempArr[index]?.id || "",
-                                    //       })
-                                    //     )
-                                    //     .catch(() =>
-                                    //       console.log(
-                                    //         "Failured to add format value"
-                                    //       )
-                                    //     );
-                                    // } else {
-                                    //   formik
-                                    //     .setFieldValue(
-                                    //       "formats",
-                                    //       formik.values.formats.push({
-                                    //         id: tempArr[index]?.id || "",
-                                    //       })
-                                    //     )
-                                    //     .catch(() =>
-                                    //       console.log(
-                                    //         "Failured to add format value"
-                                    //       )
-                                    //     );
-                                    // }
                                   }
                                   // The array is to manage the state, and this formik call is to manage the actual value being submitted
                                   formik
@@ -297,7 +268,7 @@ function CreatePlaygroup() {
                                       tempArr
                                         .filter((obj) => obj.selected === true)
                                         .map((obj) => {
-                                          return obj.id;
+                                          return { id: obj.id };
                                         })
                                     )
                                     .catch(() =>

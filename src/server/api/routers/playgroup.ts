@@ -22,7 +22,7 @@ export const playgroupRouter = createTRPCRouter({
       z.object({
         currentSize: z.number(),
         maxSize: z.number(),
-        formats: z.object({}),
+        formats: z.object({ id: z.string() }).array(),
         description: z.string(),
         name: z.string(),
         city: z.string(),
@@ -37,7 +37,6 @@ export const playgroupRouter = createTRPCRouter({
         data: {
           currentSize: opts.input.currentSize,
           maxSize: opts.input.maxSize,
-          formats: opts.input.formats,
           description: opts.input.description,
           name: opts.input.name,
           city: opts.input.city,
@@ -45,6 +44,9 @@ export const playgroupRouter = createTRPCRouter({
           physical: opts.input.physical,
           sticky: opts.input.sticky,
           cardId: opts.input.cardId,
+          formats: {
+            connect: opts.input.formats,
+          },
         },
       })
     ),
