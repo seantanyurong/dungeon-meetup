@@ -4,28 +4,30 @@ import { api } from "~/utils/api";
 import Logo from "~/components/general/logo";
 import type { ScryfallCard } from "~/utils/types";
 import { useFormik } from "formik";
+import PlacesAutocomplete from "react-places-autocomplete";
 
 function CreatePlaygroup() {
   const { data: formatTypes } = api.format.getAll.useQuery();
   const [card, setCard] = useState<ScryfallCard>();
+  const [city, setCity] = useState("");
 
-  //   type PlaygroupValues = Omit<
-  //     Playgroup,
-  //     "id" | "createdAt" | "formats" | "sticky" | "cardId"
-  //   >;
+  const handleCityChange = (city: string) => {
+    setCity(city);
+    formik.setFieldValue("city", city).catch(() => console.log("City error"));
+  };
 
   const createPlaygroupMutation = api.playgroup.createPlaygroup.useMutation();
 
   const formik = useFormik({
     initialValues: {
-      currentSize: 0,
-      maxSize: 0,
-      formats: [{ id: "1" }],
+      currentSize: NaN,
+      maxSize: NaN,
+      formats: [{ id: "" }],
       description: "",
       name: "",
       city: "",
       lgs: false,
-      physical: "physical",
+      physical: "Physical",
       cardId: "",
       sticky: false,
     },
@@ -73,6 +75,7 @@ function CreatePlaygroup() {
   return (
     <main className="flex">
       {/* Content */}
+
       <div className="min-h-screen w-full lg:w-1/2">
         <div className="h-full px-5 sm:px-6">
           <div className="mx-auto flex h-full w-full max-w-md flex-col px-6 after:mt-auto after:flex-1">
@@ -182,7 +185,7 @@ function CreatePlaygroup() {
                           className="form-input w-full"
                           type="number"
                           required
-                          placeholder="E.g., 2"
+                          placeholder="E.g., 5"
                           onChange={formik.handleChange}
                           value={formik.values.maxSize}
                         />
@@ -215,7 +218,66 @@ function CreatePlaygroup() {
                         >
                           City <span className="text-red-500">*</span>
                         </label>
-                        <input
+                        <PlacesAutocomplete
+                          value={city}
+                          onChange={handleCityChange}
+                          //   onSelect={handleCitySelect}
+                          searchOptions={{ types: ["locality"] }} // limits to cities only
+                        >
+                          {({
+                            getInputProps,
+                            suggestions,
+                            getSuggestionItemProps,
+                            loading,
+                          }) => (
+                            <div>
+                              <input
+                                {...getInputProps({
+                                  id: "city",
+                                  name: "city",
+                                  placeholder: "E.g., Singapore",
+                                  type: "text",
+                                  className:
+                                    "location-search-input form-input w-full",
+                                  required:
+                                    formik.values.physical === "Physical",
+                                  disabled:
+                                    formik.values.physical !== "Physical",
+                                })}
+                              />
+                              <div className="autocomplete-dropdown-container">
+                                {loading && <div>Loading...</div>}
+                                {suggestions.map((suggestion) => {
+                                  const className = suggestion.active
+                                    ? "suggestion-item--active"
+                                    : "suggestion-item";
+                                  // inline style for demonstration purpose
+                                  const style = suggestion.active
+                                    ? {
+                                        backgroundColor: "#fafafa",
+                                        cursor: "pointer",
+                                      }
+                                    : {
+                                        backgroundColor: "#ffffff",
+                                        cursor: "pointer",
+                                      };
+                                  return (
+                                    <div
+                                      {...getSuggestionItemProps(suggestion, {
+                                        className,
+                                        style,
+                                      })}
+                                      key={1}
+                                    >
+                                      <span>{suggestion.description}</span>
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          )}
+                        </PlacesAutocomplete>
+                        {/* <input
                           id="city"
                           name="city"
                           className="form-input w-full"
@@ -224,7 +286,7 @@ function CreatePlaygroup() {
                           placeholder="E.g., Singapore"
                           onChange={formik.handleChange}
                           value={formik.values.city}
-                        />
+                        /> */}
                       </div>
                     </div>
                   </div>

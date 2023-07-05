@@ -24,8 +24,8 @@ export default function Hero() {
               >
                 <div>
                   <a
-                    className="btn font-montreal w-full border-[1px] border-white bg-black px-24 text-xl text-white shadow-4xl transition duration-[0.4s] hover:bg-indigo-950 hover:shadow-3xl sm:ml-4 sm:w-auto"
-                    href="#0"
+                    className="btn w-full border-[1px] border-white bg-black px-24 font-montreal text-xl text-white shadow-4xl transition duration-[0.4s] hover:bg-indigo-950 hover:shadow-3xl sm:ml-4 sm:w-auto"
+                    href="create-playgroup"
                   >
                     Create a Playgroup
                   </a>

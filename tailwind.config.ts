@@ -70,8 +70,8 @@ export default {
       },
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],
-        // financier: ["var(--font-financier)"],
-        // montreal: ["var(--font-montreal)"],
+        financier: ["Rubik", "sans-serif"],
+        montreal: ["Rubik", "sans-serif"],
       },
       fontSize: {
         xs: "0.75rem",
