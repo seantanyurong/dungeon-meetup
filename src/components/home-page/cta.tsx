@@ -14,7 +14,7 @@ export default function Cta() {
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
-                className="font-montreal mb-8 text-xl text-white"
+                className=" mb-8 text-xl text-white"
                 data-aos="zoom-y-out"
                 data-aos-delay="150"
               >
@@ -27,7 +27,7 @@ export default function Cta() {
               >
                 <div>
                   <a
-                    className="btn font-montreal w-full border-[1px] border-white bg-black px-24 text-xl text-white shadow-4xl transition duration-[0.4s] hover:bg-indigo-950 hover:shadow-3xl sm:ml-4 sm:w-auto"
+                    className="btn  w-full border-[1px] border-white bg-black px-24 text-xl text-white shadow-4xl transition duration-[0.4s] hover:bg-indigo-950 hover:shadow-3xl sm:ml-4 sm:w-auto"
                     href="https://szuv34ek50v.typeform.com/to/VJtnptbh"
                   >
                     Get Started

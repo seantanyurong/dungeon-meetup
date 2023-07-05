@@ -16,7 +16,7 @@ export default function Hero() {
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
-                className="font-montreal mb-8 text-2xl text-white md:text-3xl"
+                className=" mb-8 text-2xl text-white md:text-3xl"
                 data-aos="zoom-y-out"
                 data-aos-delay="150"
               >
@@ -30,7 +30,7 @@ export default function Hero() {
               >
                 <div>
                   <a
-                    className="btn font-montreal w-full border-[1px] border-white bg-black px-24 text-xl text-white shadow-4xl transition duration-[0.4s] hover:bg-indigo-950 hover:shadow-3xl sm:ml-4 sm:w-auto"
+                    className="btn  w-full border-[1px] border-white bg-black px-24 text-xl text-white shadow-4xl transition duration-[0.4s] hover:bg-indigo-950 hover:shadow-3xl sm:ml-4 sm:w-auto"
                     href="#0"
                   >
                     Get Started

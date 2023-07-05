@@ -15,7 +15,7 @@ export default function MemberCard({
   description,
 }: MemberCardProps) {
   return (
-    <div className="drop-shadow-sm flex rounded-2xl max-w-xl overflow-hidden mx-2 h-full">
+    <div className="mx-2 flex h-full max-w-xl overflow-hidden rounded-2xl drop-shadow-sm">
       <Image
         loading="eager"
         src={image}
@@ -24,10 +24,10 @@ export default function MemberCard({
         height={500}
         style={{ objectFit: "cover" }}
       />
-      <div className="p-8 text-left bg-white">
+      <div className="bg-white p-8 text-left">
         <h2 className="h3 mb-1">{name}</h2>
-        <p className="text-lg font-medium mb-4 font-montreal">{title}</p>
-        <p className="font-montreal font-medium">{description}</p>
+        <p className="mb-4 text-lg font-medium ">{title}</p>
+        <p className=" font-medium">{description}</p>
       </div>
     </div>
   );

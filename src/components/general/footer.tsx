@@ -19,7 +19,7 @@ export default function Footer() {
             </div>
             <span className="block h-[1px] w-[39%] rounded-full bg-[#d1d3cd]"></span>
           </div>
-          <p className="font-montreal my-12 text-center text-xl font-medium">
+          <p className=" my-12 text-center text-xl font-medium">
             Dungeon Meetup is a community for Magic the Gathering players to
             find physical playgroups.
           </p>
@@ -30,7 +30,7 @@ export default function Footer() {
           >
             <div>
               <a
-                className="btn font-montreal w-full bg-purple-600 px-24  text-xl text-white shadow-7xl transition duration-[0.4s] hover:shadow-6xl sm:ml-4 sm:w-auto"
+                className="btn  w-full bg-purple-600 px-24  text-xl text-white shadow-7xl transition duration-[0.4s] hover:shadow-6xl sm:ml-4 sm:w-auto"
                 href="https://szuv34ek50v.typeform.com/to/VJtnptbh"
               >
                 Get Started
@@ -65,7 +65,7 @@ export default function Footer() {
           </ul>
 
           {/* Copyrights note */}
-          <div className="font-montreal mr-4 text-lg">
+          <div className=" mr-4 text-lg">
             &copy; 2023 Dungeon Meetup. All rights reserved.
           </div>
         </div>

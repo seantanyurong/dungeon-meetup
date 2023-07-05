@@ -21,7 +21,7 @@ export default function Introduction() {
               <h4 className="mb-1 text-2xl font-bold">
                 Monthly Mastermind Groups
               </h4>
-              <p className="font-montreal text-xl leading-snug">
+              <p className=" text-xl leading-snug">
                 A group of 8 founders with an executive facilitator, who leads
                 discussion where advice and critical feedback is shared to help
                 accelerate your business growth.
@@ -29,7 +29,7 @@ export default function Introduction() {
             </div>
             <div className="items-left relative flex h-full flex-col rounded bg-white p-8 text-left shadow-lg">
               <h4 className="mb-1 text-2xl font-bold">Digital Community</h4>
-              <p className="font-montreal text-xl leading-snug">
+              <p className=" text-xl leading-snug">
                 Access to a digital and highly engaged community of founders who
                 provide helpful advice, a dedicated digital concierge, and
                 weekly newsletter.
@@ -37,7 +37,7 @@ export default function Introduction() {
             </div>{" "}
             <div className="items-left relative flex h-full flex-col rounded bg-white p-8 text-left shadow-lg">
               <h4 className="mb-1 text-2xl font-bold">In-Person Community</h4>
-              <p className="font-montreal text-xl leading-snug">
+              <p className=" text-xl leading-snug">
                 Our in-person event strategy is focused around three pillars:
                 monthly member dinners, annual retreats, and local adventures.
               </p>
@@ -46,7 +46,7 @@ export default function Introduction() {
               <h4 className="mb-1 text-2xl font-bold">
                 Speaker Series & Education
               </h4>
-              <p className="font-montreal text-xl leading-snug">
+              <p className=" text-xl leading-snug">
                 We know how important it is to have access to the best and
                 brightest. So, we host unique workshops and bring in experts
                 across a variety of topics.
@@ -54,7 +54,7 @@ export default function Introduction() {
             </div>{" "}
             <div className="items-left relative flex h-full flex-col rounded bg-white p-8 text-left shadow-lg">
               <h4 className="mb-1 text-2xl font-bold">Exclusive Perks</h4>
-              <p className="font-montreal text-xl leading-snug">
+              <p className=" text-xl leading-snug">
                 We’ve secured exclusive discounts with the most popular software
                 companies, tools, and apps. We also have a robust preferred
                 vendor database.

@@ -45,17 +45,17 @@ export default function Header() {
                 <li>
                   <Link
                     href="/create-playgroup"
-                    className="font-montreal flex items-center rounded-lg bg-black px-8 py-2 font-medium text-white transition duration-[0.4s] ease-in-out hover:bg-indigo-950"
+                    className="flex items-center rounded-lg bg-black px-8 py-2 font-medium text-white transition duration-[0.4s] ease-in-out hover:bg-indigo-950"
                   >
-                    CREATE
+                    Create
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/playgroups"
-                    className="btn-sm font-montreal ml-3 rounded-lg border-[1px] border-black bg-purple-600 px-8 font-medium text-black transition duration-[0.4s] hover:shadow-5xl"
+                    className="btn-sm ml-3 rounded-lg border-[1px] border-black bg-purple-600 px-8 font-medium text-black transition duration-[0.4s] hover:shadow-5xl"
                   >
-                    <span>JOIN</span>
+                    <span>Join</span>
                   </Link>
                 </li>
                 <li className="ml-3">
@@ -68,7 +68,7 @@ export default function Header() {
                 <li>
                   <Link
                     href="/sign-up"
-                    className="font-montreal flex items-center rounded-lg bg-black px-8 py-2 font-medium text-white transition duration-[0.4s] ease-in-out hover:bg-indigo-950"
+                    className="flex items-center rounded-lg bg-black px-8 py-2 font-medium text-white transition duration-[0.4s] ease-in-out hover:bg-indigo-950"
                   >
                     GET STARTED
                   </Link>
@@ -76,7 +76,7 @@ export default function Header() {
                 <li>
                   <Link
                     href="/sign-in"
-                    className="btn-sm font-montreal ml-3 rounded-lg border-[1px] border-black bg-purple-600 px-8 font-medium text-black transition duration-[0.4s] hover:shadow-5xl"
+                    className="btn-sm ml-3 rounded-lg border-[1px] border-black bg-purple-600 px-8 font-medium text-black transition duration-[0.4s] hover:shadow-5xl"
                   >
                     <span>LOGIN</span>
                   </Link>

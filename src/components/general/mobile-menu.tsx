@@ -76,7 +76,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="https://szuv34ek50v.typeform.com/to/VJtnptbh"
-                className="font-lg font-montreal rounded-lg bg-brown-400 px-20 py-4 text-blue-500 transition duration-[0.4s] ease-in-out hover:bg-brown-300"
+                className="font-lg  rounded-lg bg-brown-400 px-20 py-4 text-blue-500 transition duration-[0.4s] ease-in-out hover:bg-brown-300"
               >
                 APPLY
               </Link>
@@ -84,7 +84,7 @@ export default function MobileMenu() {
             <li>
               <Link
                 href="https://szuv34ek50v.typeform.com/to/VJtnptbh"
-                className="font-lg btn-sm font-montreal rounded-lg border-[1px] border-brown-400 bg-purple-600 px-20 py-4 text-brown-400 transition duration-[0.4s] hover:shadow-5xl"
+                className="font-lg btn-sm  rounded-lg border-[1px] border-brown-400 bg-purple-600 px-20 py-4 text-brown-400 transition duration-[0.4s] hover:shadow-5xl"
               >
                 <span>LOGIN</span>
               </Link>

@@ -126,7 +126,7 @@ export default function Features() {
                 from countries all across the globe.
               </Balancer>
             </h1>
-            <p className="font-montreal text-xl text-blue-500">
+            <p className=" text-xl text-blue-500">
               Some play EDH, others competitive or limited constructed formats.
               But all our playgroups seek fun, belonging, and connection with
               other Magic the Gathering players.
