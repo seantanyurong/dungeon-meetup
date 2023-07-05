@@ -4,113 +4,169 @@ import Image from "next/image";
 import LeftGradient from "public/images/left-gradient.png";
 import RightGradient from "public/images/right-gradient.png";
 import Marquee from "react-fast-marquee";
-import MemberCard from "../ui/member-card";
+import PlaygroupCard from "../ui/playgroup-card";
 import { Balancer } from "react-wrap-balancer";
-import { api } from "~/utils/api";
-import PlaygroupItem from "../playgroups-page/PlaygroupItem";
-import Member1 from "public/images/member-1.jpeg";
-import Member2 from "public/images/member-2.jpeg";
-import Member3 from "public/images/member-3.jpeg";
-import Member4 from "public/images/member-4.jpeg";
-import Member5 from "public/images/member-5.jpeg";
-import Member6 from "public/images/member-6.jpeg";
-import Member7 from "public/images/member-7.jpeg";
-import Member8 from "public/images/member-8.jpeg";
-import Member9 from "public/images/member-9.jpeg";
-import Member10 from "public/images/member-10.jpeg";
-import Member11 from "public/images/member-11.jpeg";
-import Member12 from "public/images/member-12.jpeg";
+import card1 from "public/images/card-1.jpg";
+import card2 from "public/images/card-2.jpg";
+import card3 from "public/images/card-3.jpg";
+import card4 from "public/images/card-4.jpg";
+import card5 from "public/images/card-5.jpg";
+import card6 from "public/images/card-6.jpg";
+import card7 from "public/images/card-7.jpg";
+import card8 from "public/images/card-8.jpg";
+import card9 from "public/images/card-9.jpg";
+import card10 from "public/images/card-10.jpg";
+import card11 from "public/images/card-11.jpg";
+import card12 from "public/images/card-12.jpg";
 
 export default function Features() {
-  const { data: playgroups } = api.playgroup.getAll.useQuery();
-
-  const memberList1 = [
+  const playgroupList1 = [
     {
-      image: Member1,
-      name: "Stuart Little",
-      title: "Founder of Fork & Knife",
+      currentSize: 2,
+      maxSize: 5,
+      formats: ["EDH", "Cube"],
       description:
-        "Fork & Knife offers a refined dining experience with its sophisticated ambiance, impeccable service, and an innovative menu that appeals to discerning customers, contributing to annual revenues exceeding $3m.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur magna velit, in laoreet tellus maximus sit amet. Sed viverra, ligula in porttitor ultricies, leo.",
+      name: "Singapore EDH",
+      city: "Singapore",
+      lgs: false,
+      physical: "Physical",
+      image: card1,
     },
     {
-      image: Member2,
-      name: "Richard Brawn",
-      title: "Founder of Flavor Fusion",
+      currentSize: 2,
+      maxSize: 5,
+      formats: ["EDH", "Cube"],
       description:
-        "Situated in Singapore, Flavor Fusion is a dynamic restaurant that blends global culinary influences, creating an exciting fusion of flavors that appeals to a diverse clientele, resulting in annual revenues exceeding $2.5m.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur magna velit, in laoreet tellus maximus sit amet. Sed viverra, ligula in porttitor ultricies, leo.",
+      name: "Singapore EDH",
+      city: "Singapore",
+      lgs: false,
+      physical: "Physical",
+      image: card2,
     },
     {
-      image: Member3,
-      name: "Bob Saigon",
-      title: "Founder of The Savory Spoon",
+      currentSize: 2,
+      maxSize: 5,
+      formats: ["EDH", "Cube"],
       description:
-        "A cozy neighborhood eatery nestled in the heart of Ho Chi Minh, The Savory Spoon offers a diverse menu of comforting dishes inspired by local flavors, attracting a loyal customer base and generating $5m a year with multiple outlets.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur magna velit, in laoreet tellus maximus sit amet. Sed viverra, ligula in porttitor ultricies, leo.",
+      name: "Singapore EDH",
+      city: "Singapore",
+      lgs: false,
+      physical: "Physical",
+      image: card3,
     },
     {
-      image: Member4,
-      name: "Howard Nate",
-      title: "Founder of Taste Buds",
+      currentSize: 2,
+      maxSize: 5,
+      formats: ["EDH", "Cube"],
       description:
-        "Taste Buds is a popular restaurant known for its adventurous and creative menu in Bangkok, showcasing a range of international cuisines that entice and delight customers, contributing to an impressive annual revenue of over $1m.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur magna velit, in laoreet tellus maximus sit amet. Sed viverra, ligula in porttitor ultricies, leo.",
+      name: "Singapore EDH",
+      city: "Singapore",
+      lgs: false,
+      physical: "Physical",
+      image: card4,
     },
     {
-      image: Member5,
-      name: "Lily Tang",
-      title: "Founder of The Hungry Hearth",
+      currentSize: 2,
+      maxSize: 5,
+      formats: ["EDH", "Cube"],
       description:
-        "A beloved establishment in a Cambodia, The Hungry Hearth captures the essence of home-cooked meals with its comforting dishes, fostering a strong customer following and revnue of $800k with two outlets.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur magna velit, in laoreet tellus maximus sit amet. Sed viverra, ligula in porttitor ultricies, leo.",
+      name: "Singapore EDH",
+      city: "Singapore",
+      lgs: false,
+      physical: "Physical",
+      image: card5,
     },
     {
-      image: Member6,
-      name: "Mary Rose",
-      title: "Founder of Spice Avenue",
+      currentSize: 2,
+      maxSize: 5,
+      formats: ["EDH", "Cube"],
       description:
-        "Spice Avenue is a destination restaurant celebrated for its bold and aromatic dishes inspired by the vibrant street food scene, attracting a steady flow of customers and generating annual revenue of $1.5m.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur magna velit, in laoreet tellus maximus sit amet. Sed viverra, ligula in porttitor ultricies, leo.",
+      name: "Singapore EDH",
+      city: "Singapore",
+      lgs: false,
+      physical: "Physical",
+      image: card6,
     },
   ];
 
-  const memberList2 = [
+  const playgroupList2 = [
     {
-      image: Member7,
-      name: "Michelle Toh",
-      title: "Founder of The Gastronomy Grill",
+      currentSize: 2,
+      maxSize: 5,
+      formats: ["EDH", "Cube"],
       description:
-        "Situated in Nepal, The Gastronomy Grill is a renowned restaurant that elevates grilling to an art form, enticing customers with its skillfully prepared dishes, with annual revenue surpassing $1.5m.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur magna velit, in laoreet tellus maximus sit amet. Sed viverra, ligula in porttitor ultricies, leo.",
+      name: "Singapore EDH",
+      city: "Singapore",
+      lgs: false,
+      physical: "Physical",
+      image: card7,
     },
     {
-      image: Member8,
-      name: "Mark Stone",
-      title: "Founder of Palate Pleasers",
+      currentSize: 2,
+      maxSize: 5,
+      formats: ["EDH", "Cube"],
       description:
-        "A hidden gem in a Jakarta, Palate Pleasers captivates customers, featuring a diverse range of flavors that cater to various palates and lifestyles, generating an impressive annual revenue of $1.5m.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur magna velit, in laoreet tellus maximus sit amet. Sed viverra, ligula in porttitor ultricies, leo.",
+      name: "Singapore EDH",
+      city: "Singapore",
+      lgs: false,
+      physical: "Physical",
+      image: card8,
     },
     {
-      image: Member9,
-      name: "Jewel Ringard",
-      title: "Founder of The Culinary Canvas",
+      currentSize: 2,
+      maxSize: 5,
+      formats: ["EDH", "Cube"],
       description:
-        "Located in India, The Culinary Canvas is a culinary hotspot that embraces creativity, presenting visually stunning dishes and generating annual revenue of over $1.5m with 3 outlets across the country of India.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur magna velit, in laoreet tellus maximus sit amet. Sed viverra, ligula in porttitor ultricies, leo.",
+      name: "Singapore EDH",
+      city: "Singapore",
+      lgs: false,
+      physical: "Physical",
+      image: card9,
     },
     {
-      image: Member10,
-      name: "Bob Ross",
-      title: "Founder of Foodie's Delight",
+      currentSize: 2,
+      maxSize: 5,
+      formats: ["EDH", "Cube"],
       description:
-        "Foodie's Delight is a culinary haven that satisfies the cravings of discerning food enthusiasts, offering a menu of delectable dishes that consistently generate annual revenue exceeding $1.5m.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur magna velit, in laoreet tellus maximus sit amet. Sed viverra, ligula in porttitor ultricies, leo.",
+      name: "Singapore EDH",
+      city: "Singapore",
+      lgs: false,
+      physical: "Physical",
+      image: card10,
     },
     {
-      image: Member11,
-      name: "Elinda Lim",
-      title: "Founder of The Epicurean's Table",
+      currentSize: 2,
+      maxSize: 5,
+      formats: ["EDH", "Cube"],
       description:
-        "Nestled in an Indonesia, The Epicurean's Table is a luxurious dining destination that caters to the sophisticated palates of discerning diners, resulting in a thriving business with annual revenues surpassing $2m.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur magna velit, in laoreet tellus maximus sit amet. Sed viverra, ligula in porttitor ultricies, leo.",
+      name: "Singapore EDH",
+      city: "Singapore",
+      lgs: false,
+      physical: "Physical",
+      image: card11,
     },
     {
-      image: Member12,
-      name: "Barbie Ross",
-      title: "Founder of Bistro Bliss",
+      currentSize: 2,
+      maxSize: 5,
+      formats: ["EDH", "Cube"],
       description:
-        "Situated in a charming downtonw Korea, Bistro Bliss offers an intimate and inviting atmosphere where guests can savor a delightful menu of carefully crafted dishes, contributing to an annual revenue of $1.5m.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur magna velit, in laoreet tellus maximus sit amet. Sed viverra, ligula in porttitor ultricies, leo.",
+      name: "Singapore EDH",
+      city: "Singapore",
+      lgs: false,
+      physical: "Physical",
+      image: card12,
     },
   ];
 
@@ -127,9 +183,9 @@ export default function Features() {
               </Balancer>
             </h1>
             <p className=" text-xl text-blue-500">
-              Some play EDH, others competitive or limited constructed formats.
-              But all our playgroups seek fun, belonging, and connection with
-              other Magic the Gathering players.
+              Some play EDH, others competitive or limited formats. But all our
+              playgroups seek fun, belonging, and connection with other Magic
+              the Gathering players.
             </p>
           </div>
         </div>
@@ -137,10 +193,10 @@ export default function Features() {
 
       <div className="relative">
         <Marquee className="pb-4">
-          {playgroups?.map((playgroup, index) => {
+          {playgroupList1?.map((playgroup, index) => {
             return (
               <div className="col-span-9 lg:col-span-3" key={index}>
-                <MemberCard
+                <PlaygroupCard
                   currentSize={playgroup.currentSize}
                   maxSize={playgroup.maxSize}
                   formats={playgroup.formats}
@@ -149,26 +205,32 @@ export default function Features() {
                   city={playgroup.city}
                   lgs={playgroup.lgs}
                   physical={playgroup.physical}
-                  cardId={playgroup.cardId}
+                  image={playgroup.image}
                 />
               </div>
             );
           })}
         </Marquee>
-        {/* <Marquee direction="right" className="pb-4">
-          {memberList2.map((member, index) => {
+        <Marquee direction="right" className="pb-4">
+          {playgroupList2?.map((playgroup, index) => {
             return (
               <div className="col-span-9 lg:col-span-3" key={index}>
-                <MemberCard
-                  image={member.image}
-                  name={member.name}
-                  title={member.title}
-                  description={member.description}
+                <PlaygroupCard
+                  currentSize={playgroup.currentSize}
+                  maxSize={playgroup.maxSize}
+                  formats={playgroup.formats}
+                  description={playgroup.description}
+                  name={playgroup.name}
+                  city={playgroup.city}
+                  lgs={playgroup.lgs}
+                  physical={playgroup.physical}
+                  image={playgroup.image}
                 />
               </div>
             );
           })}
-        </Marquee> */}
+        </Marquee>
+
         <div className="absolute bottom-0 left-0 right-auto top-0 z-10 hidden w-[10.31em] sm:block">
           <Image src={LeftGradient} className="h-[100%] w-[100%]" alt="temp" />
         </div>
