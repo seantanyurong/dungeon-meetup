@@ -38,7 +38,7 @@ function PlaygroupItem({
         !sticky ? "border-b border-gray-200" : ""
       }`}
     >
-      <div className={`px-4 py-6 ${sticky ? "rounded-xl bg-indigo-100" : ""}`}>
+      <div className={`px-4 py-6 ${sticky ? "rounded-xl bg-violet-200" : ""}`}>
         <div className="items-center space-y-3 sm:flex sm:space-x-5 sm:space-y-0">
           <div className="shrink-0 ">
             <Image
@@ -77,7 +77,7 @@ function PlaygroupItem({
                   return (
                     <a
                       className={`m-1 inline-flex whitespace-nowrap rounded-md px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150 ease-in-out hover:text-gray-600 ${
-                        sticky ? "bg-indigo-200" : "bg-gray-100"
+                        sticky ? "bg-violet-300" : "bg-slate-200"
                       }`}
                       href="#0"
                       key={format.id}
@@ -88,7 +88,7 @@ function PlaygroupItem({
                 })}
                 <a
                   className={`m-1 inline-flex whitespace-nowrap rounded-md px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150 ease-in-out hover:text-gray-600 ${
-                    sticky ? "bg-indigo-200" : "bg-gray-100"
+                    sticky ? "bg-violet-300" : "bg-slate-200"
                   }`}
                   href="#0"
                 >
@@ -96,7 +96,7 @@ function PlaygroupItem({
                 </a>
                 <a
                   className={`m-1 inline-flex whitespace-nowrap rounded-md px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150 ease-in-out hover:text-gray-600 ${
-                    sticky ? "bg-indigo-200" : "bg-gray-100"
+                    sticky ? "bg-violet-300" : "bg-slate-200"
                   }`}
                   href="#0"
                 >
@@ -105,7 +105,7 @@ function PlaygroupItem({
                 {lgs && (
                   <a
                     className={`m-1 inline-flex whitespace-nowrap rounded-md px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150 ease-in-out hover:text-gray-600 ${
-                      sticky ? "bg-indigo-100" : "bg-gray-100"
+                      sticky ? "bg-violet-300" : "bg-slate-200"
                     }`}
                     href="#0"
                   >

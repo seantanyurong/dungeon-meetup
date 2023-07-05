@@ -1,6 +1,3 @@
-import Image from "next/image";
-import Five from "public/images/five.png";
-
 export default function Introduction() {
   return (
     <section className="relative">

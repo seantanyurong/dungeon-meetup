@@ -67,7 +67,7 @@ export default function PlaygroupCard({
           {formats?.map((format, index) => {
             return (
               <a
-                className={`mr-2 inline-flex whitespace-nowrap rounded-md bg-indigo-200 px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150 ease-in-out hover:text-gray-600`}
+                className={`mr-2 inline-flex whitespace-nowrap rounded-md bg-violet-300 px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150 ease-in-out hover:text-gray-600`}
                 href=""
                 key={index}
               >
@@ -76,20 +76,20 @@ export default function PlaygroupCard({
             );
           })}
           <a
-            className={`mr-2 inline-flex whitespace-nowrap rounded-md bg-indigo-200 px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150 ease-in-out  hover:text-gray-600`}
+            className={`mr-2 inline-flex whitespace-nowrap rounded-md bg-violet-300 px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150 ease-in-out  hover:text-gray-600`}
             href=""
           >
             {physical}
           </a>
           <a
-            className={`mr-2 inline-flex whitespace-nowrap rounded-md bg-indigo-200 px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150 ease-in-out hover:text-gray-600`}
+            className={`mr-2 inline-flex whitespace-nowrap rounded-md bg-violet-300 px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150 ease-in-out hover:text-gray-600`}
             href=""
           >
             {`${currentSize} / ${maxSize} Players`}
           </a>
           {lgs && (
             <a
-              className={`mr-2 inline-flex whitespace-nowrap rounded-md bg-indigo-200 px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150 ease-in-out hover:text-gray-600`}
+              className={`mr-2 inline-flex whitespace-nowrap rounded-md bg-violet-300 px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150 ease-in-out hover:text-gray-600`}
               href=""
             >
               Local Game Store

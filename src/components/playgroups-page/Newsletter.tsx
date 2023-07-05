@@ -7,7 +7,7 @@ function Newsletter() {
         className="absolute inset-0 -z-10 -rotate-1 rounded-xl border border-gray-200 bg-gray-50 transition duration-150 ease-in-out group-hover:rotate-0"
         aria-hidden="true"
       />
-      <div className="font-nycd mb-1 text-xl text-indigo-500">
+      <div className="font-nycd mb-1 text-xl text-purple-600">
         The Ultimate Magic Playgroup Finder
       </div>
       <div className="mb-5 text-2xl font-bold">
@@ -22,7 +22,7 @@ function Newsletter() {
             aria-label="Your email"
           /> */}
           <button
-            className="btn whitespace-nowrap bg-indigo-500 text-white shadow-sm hover:bg-indigo-600"
+            className="btn whitespace-nowrap bg-purple-600 text-white shadow-sm hover:bg-purple-800"
             type="submit"
           >
             Join Discord
