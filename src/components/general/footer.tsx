@@ -21,7 +21,7 @@ export default function Footer() {
           </div>
           <p className=" my-12 text-center text-xl font-medium">
             Dungeon Meetup is a community for Magic the Gathering players to
-            find physical playgroups.
+            find playgroups.
           </p>
           <div
             className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"

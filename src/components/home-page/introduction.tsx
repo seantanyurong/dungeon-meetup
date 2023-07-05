@@ -13,31 +13,29 @@ export default function Introduction() {
                 Let&apos;s put the Gathering back in Magic.
               </h2>
               <p className=" black mb-3 text-xl">
-                You have to make difficult decisions every day with imperfect
-                information on problems you’ve likely never faced before. It’s
-                daunting.
+                Finding a regular playgroup that matches your schedule, power
+                level and vibe is not the easiest thing to do, especially when
+                you&apos;re in a new country or if you&apos;re just getting back
+                into the game.
               </p>
               <p className=" black mb-3 text-xl">
-                In our experience, the best way to overcome the challenges is to
-                learn from the wins and mistakes of others, and to surround
-                yourself with founders who’ve been there, done that.
+                With established cliques at the local game stores, it&apos;s
+                often difficult, and a little awkward to ask to join a game and
+                to be looped into the group&apos;s regular meetups.
               </p>
               <p className=" black mb-3 text-xl">
-                Whether you’re in the thick of it in Singapore or Thailand, or
-                you’re a restaurant owner in Indonesia, finding your people is
-                tough.
-              </p>
-
-              <p className=" black mb-3 text-xl">
-                But when you do find them, it’s life changing.
+                And that’s what Dungeon Meetup is for.
               </p>
               <p className=" black mb-3 text-xl">
-                And that’s what Labyrinth is for.
+                Dungeon Meetup provides you a platform to create playgroups or
+                join existing ones located in your area. It&apos;s a way for you
+                to get plugged into the community and start playing regularly
+                immediately.
               </p>
               <p className=" black mb-3 text-xl">
-                Joining Labyrinth gives you immediate access to a tribe of
-                founders and entrepreneurs who are going through the same things
-                as you. Members consistently call it “life changing”.
+                You don&apos;t have to worry about any awkward interactions
+                because the people here are already looking for more players,
+                and will be happy to induct new ones into their playgroups.
               </p>
             </div>
 

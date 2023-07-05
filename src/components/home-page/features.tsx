@@ -22,7 +22,7 @@ import Member11 from "public/images/member-11.jpeg";
 import Member12 from "public/images/member-12.jpeg";
 
 export default function Features() {
-  const { data } = api.playgroup.getAll.useQuery();
+  const { data: playgroups } = api.playgroup.getAll.useQuery();
 
   const memberList1 = [
     {
@@ -137,20 +137,25 @@ export default function Features() {
 
       <div className="relative">
         <Marquee className="pb-4">
-          {memberList1.map((member, index) => {
+          {playgroups?.map((playgroup, index) => {
             return (
               <div className="col-span-9 lg:col-span-3" key={index}>
                 <MemberCard
-                  image={member.image}
-                  name={member.name}
-                  title={member.title}
-                  description={member.description}
+                  currentSize={playgroup.currentSize}
+                  maxSize={playgroup.maxSize}
+                  formats={playgroup.formats}
+                  description={playgroup.description}
+                  name={playgroup.name}
+                  city={playgroup.city}
+                  lgs={playgroup.lgs}
+                  physical={playgroup.physical}
+                  cardId={playgroup.cardId}
                 />
               </div>
             );
           })}
         </Marquee>
-        <Marquee direction="right" className="pb-4">
+        {/* <Marquee direction="right" className="pb-4">
           {memberList2.map((member, index) => {
             return (
               <div className="col-span-9 lg:col-span-3" key={index}>
@@ -163,7 +168,7 @@ export default function Features() {
               </div>
             );
           })}
-        </Marquee>
+        </Marquee> */}
         <div className="absolute bottom-0 left-0 right-auto top-0 z-10 hidden w-[10.31em] sm:block">
           <Image src={LeftGradient} className="h-[100%] w-[100%]" alt="temp" />
         </div>

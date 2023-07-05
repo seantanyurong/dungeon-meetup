@@ -18,7 +18,7 @@ model Playgroup {
     currentSize Int
     maxSize Int
     formats Format[]
-    description String
+    description String @db.VarChar(10000)
     name String
     city String
     lgs Boolean

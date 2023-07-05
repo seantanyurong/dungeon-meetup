@@ -20,8 +20,8 @@ export default function Hero() {
                 data-aos="zoom-y-out"
                 data-aos-delay="150"
               >
-                Join or launch a physical playgroup in your area to play casual
-                EDH or competitive formats every week.
+                Join or launch a playgroup in your area to play casual EDH or
+                competitive formats every week.
               </p>
               <div
                 className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
