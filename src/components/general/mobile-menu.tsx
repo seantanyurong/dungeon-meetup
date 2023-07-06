@@ -1,6 +1,9 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { useUser } from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
+
 import { Transition } from "@headlessui/react";
 import Link from "next/link";
 
@@ -9,6 +12,7 @@ export default function MobileMenu() {
 
   const trigger = useRef<HTMLButtonElement>(null);
   const mobileNav = useRef<HTMLDivElement>(null);
+  const { isSignedIn } = useUser();
 
   // close the mobile menu on click outside
   useEffect(() => {
@@ -72,24 +76,55 @@ export default function MobileMenu() {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <ul className="flex flex-col items-center space-y-6 px-5 py-2">
-            <li>
-              <Link
-                href="https://szuv34ek50v.typeform.com/to/VJtnptbh"
-                className="font-lg  rounded-lg bg-brown-400 px-20 py-4 text-blue-500 transition duration-[0.4s] ease-in-out hover:bg-brown-300"
-              >
-                APPLY
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="https://szuv34ek50v.typeform.com/to/VJtnptbh"
-                className="font-lg btn-sm  rounded-lg border-[1px] border-brown-400 bg-purple-600 px-20 py-4 text-brown-400 transition duration-[0.4s] hover:shadow-5xl"
-              >
-                <span>LOGIN</span>
-              </Link>
-            </li>
-          </ul>
+          {isSignedIn ? (
+            <ul className="flex flex-col items-center space-y-6 px-5 py-2">
+              <li>
+                <Link
+                  href="/create-playgroup"
+                  className="font-lg  rounded-lg bg-black px-20 py-4 text-white transition duration-[0.4s] ease-in-out hover:bg-indigo-950"
+                >
+                  CREATE
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/playgroups"
+                  className="font-lg btn-sm  rounded-lg border-[1px] border-black bg-purple-600 px-20 py-4 text-black transition duration-[0.4s] hover:shadow-5xl"
+                >
+                  <span>JOIN</span>
+                </Link>
+              </li>
+              <li className="ml-3">
+                <UserButton
+                  afterSignOutUrl="/"
+                  appearance={{
+                    elements: {
+                      userButtonPopoverCard: "left-[50%] translate-x-[-50%]",
+                    },
+                  }}
+                />
+              </li>
+            </ul>
+          ) : (
+            <ul className="flex flex-col items-center space-y-6 px-5 py-2">
+              <li>
+                <Link
+                  href="/sign-up"
+                  className="font-lg  rounded-lg bg-black px-20 py-4 text-white transition duration-[0.4s] ease-in-out hover:bg-indigo-950"
+                >
+                  GET STARTED
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/sign-in"
+                  className="font-lg btn-sm  rounded-lg border-[1px] border-black bg-purple-600 px-20 py-4 text-black transition duration-[0.4s] hover:shadow-5xl"
+                >
+                  <span>LOGIN</span>
+                </Link>
+              </li>
+            </ul>
+          )}
         </Transition>
       </div>
     </div>

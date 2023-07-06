@@ -77,3 +77,8 @@
 .form-radio {
   @apply rounded-sm text-gray-800;
 }
+
+/* Edit clerk modal for user button on mobile menu */
+.cl-userButtonPopoverCard {
+  @apply mdMax:!left-[50%] mdMax:!translate-x-[-50%];
+}

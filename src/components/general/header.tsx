@@ -47,7 +47,7 @@ export default function Header() {
                     href="/create-playgroup"
                     className="flex items-center rounded-lg bg-black px-8 py-2 font-medium text-white transition duration-[0.4s] ease-in-out hover:bg-indigo-950"
                   >
-                    Create
+                    CREATE
                   </Link>
                 </li>
                 <li>
@@ -55,7 +55,7 @@ export default function Header() {
                     href="/playgroups"
                     className="btn-sm ml-3 rounded-lg border-[1px] border-black bg-purple-600 px-8 font-medium text-black transition duration-[0.4s] hover:shadow-5xl"
                   >
-                    <span>Join</span>
+                    <span>JOIN</span>
                   </Link>
                 </li>
                 <li className="ml-3">

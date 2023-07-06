@@ -136,6 +136,7 @@ export default {
       zIndex: {
         "-1": "-1",
       },
+      screens: { mdMax: { max: "767px" } },
     },
   },
 } satisfies Config;
