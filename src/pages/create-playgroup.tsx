@@ -5,6 +5,7 @@ import Logo from "~/components/general/logo";
 import type { ScryfallCard } from "~/utils/types";
 import { useFormik } from "formik";
 import PlacesAutocomplete from "react-places-autocomplete";
+import { Oval } from "react-loader-spinner";
 
 function CreatePlaygroup() {
   const { data: formatTypes } = api.format.getAll.useQuery();
@@ -20,8 +21,8 @@ function CreatePlaygroup() {
 
   const formik = useFormik({
     initialValues: {
-      currentSize: NaN,
-      maxSize: NaN,
+      currentSize: +"",
+      maxSize: +"",
       formats: [{ id: "" }],
       description: "",
       name: "",
@@ -522,12 +523,26 @@ function CreatePlaygroup() {
         <div className="absolute inset-0 flex flex-col justify-center">
           <div className="px-5 py-8 sm:px-6">
             <div className="mx-auto w-full max-w-xl">
-              {card && (
+              {card ? (
                 <Image
                   src={card?.image_uris?.png || ""}
                   width={500}
                   height={500}
                   alt="Magic card"
+                  className="mx-auto"
+                />
+              ) : (
+                <Oval
+                  height={60}
+                  width={60}
+                  color="#9146FF"
+                  wrapperStyle={{ display: "flex", justifyContent: "center" }}
+                  wrapperClass=""
+                  visible={true}
+                  ariaLabel="oval-loading"
+                  secondaryColor="#9146FF"
+                  strokeWidth={4}
+                  strokeWidthSecondary={4}
                 />
               )}
             </div>
