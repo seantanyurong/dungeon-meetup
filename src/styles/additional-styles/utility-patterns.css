@@ -82,3 +82,8 @@
 .cl-userButtonPopoverCard {
   @apply mdMax:!left-[50%] mdMax:!translate-x-[-50%];
 }
+
+.cl-signUp-start,
+.cl-signIn-start {
+  @apply !absolute !left-[50%] !top-[50%] !translate-x-[-50%] !translate-y-[-50%];
+}

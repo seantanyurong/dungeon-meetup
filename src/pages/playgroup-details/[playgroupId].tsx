@@ -17,8 +17,6 @@ function JobPost() {
     id: playgroupId || "",
   });
 
-  console.log(playgroupData);
-
   return (
     <div className="flex min-h-screen flex-col overflow-hidden">
       {/* Site header */} .
@@ -130,8 +128,8 @@ function JobPost() {
 
                       <div className="mx-auto mb-5 max-w-xs">
                         <a
-                          className="btn group w-full bg-indigo-500 text-white shadow-sm hover:bg-indigo-600"
-                          href="#0"
+                          className="btn group w-full bg-violet-600 text-white shadow-sm hover:bg-black"
+                          href={`/playgroup-application/${playgroupId || ""}`}
                         >
                           Join Now{" "}
                           <span className="ml-1 tracking-normal text-indigo-200 transition-transform duration-150 ease-in-out group-hover:translate-x-0.5">
@@ -155,10 +153,10 @@ function JobPost() {
                 {/* Main content */}
                 <div className="md:grow">
                   {/* Job description */}
-                  <div className="pb-8">
+                  <div className="pb-28">
                     <div className="mb-4">
                       <Link
-                        className="font-bold text-indigo-500"
+                        className="font-bold text-violet-600"
                         href="/playgroups"
                       >
                         <span className="tracking-normal">&lt;-</span> View All
@@ -182,9 +180,19 @@ function JobPost() {
                         <h3 className="mb-3 text-xl font-bold text-gray-800">
                           Formats
                         </h3>
-                        {/* <div className="space-y-3 text-gray-600">
-                          <p>{playgroupData?.format}</p>
-                        </div> */}
+                        {playgroupData?.formats?.map((format) => {
+                          return (
+                            <a
+                              className={`m-1 inline-flex whitespace-nowrap rounded-md bg-violet-300 px-2 py-0.5 text-xs font-medium text-gray-800 transition duration-150
+                                ease-in-out
+                              hover:text-gray-600`}
+                              href="#0"
+                              key={format.id}
+                            >
+                              {format.formatType}
+                            </a>
+                          );
+                        })}
                       </div>
                     </div>
                     {/* Social share */}
@@ -245,7 +253,7 @@ function JobPost() {
                   {/* Related jobs */}
                   <div className="mb-8">
                     <h4 className="font-inter mb-8 text-2xl font-bold">
-                      Playgroups around the Area
+                      Playgroups in the Same City
                     </h4>
                     {/* List container */}
                     <div className="flex flex-col border-t border-gray-200">

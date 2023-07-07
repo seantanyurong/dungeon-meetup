@@ -15,7 +15,10 @@ export const playgroupRouter = createTRPCRouter({
   getById: publicProcedure
     .input(z.object({ id: z.string() }))
     .query(({ input, ctx }) => {
-      return ctx.prisma.playgroup.findUnique({ where: { id: input.id } });
+      return ctx.prisma.playgroup.findUnique({
+        where: { id: input.id },
+        include: { formats: true },
+      });
     }),
   createPlaygroup: publicProcedure
     .input(

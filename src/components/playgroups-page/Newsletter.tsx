@@ -22,7 +22,7 @@ function Newsletter() {
             aria-label="Your email"
           /> */}
           <button
-            className="btn whitespace-nowrap bg-purple-600 text-white shadow-sm hover:bg-purple-800"
+            className="btn whitespace-nowrap bg-purple-600 text-white shadow-sm hover:bg-black"
             type="submit"
           >
             Join Discord
